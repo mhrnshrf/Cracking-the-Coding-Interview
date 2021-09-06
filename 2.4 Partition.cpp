@@ -121,7 +121,7 @@ void Partition(LinkedList * list, int p){
 int main(){
     int val;
     int size;
-    int k;
+    int pivot;
     cout << "Enter a size for linked list: ";
     cin >> size;
     
@@ -134,20 +134,16 @@ int main(){
         list->append(n);
     }
     
+    cout << "Enter a pivot: ";
+    cin >> pivot;
     list->print();
 
-    Partition(list, 5);
+
+
+    Partition(list, pivot);
 
     cout << "\nAfter partition:\n";
 
     list->print();
     
-
-
- 
-   
-
-
-   
-
 }

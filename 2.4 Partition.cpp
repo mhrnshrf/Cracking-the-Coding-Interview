@@ -90,8 +90,28 @@ class LinkedList{
 
 void Partition(LinkedList * list, int p){
     Node * it = list->head;
-    while (it != NULL)
+    Node * end = NULL;
+    bool first_moved = false;
+    while (it != NULL && it->next != NULL && it != end)
     {
+        if (it->value >= p)
+        {
+            Node * temp = new Node(it->value);
+            Node * next = it->next;
+            list->remove(it);
+            list->append(temp);
+            it = next;
+            if (!first_moved)
+            {
+                first_moved = true;
+                end = temp;
+            }
+        }
+        else
+        {
+            it = it->next;
+        }
+
 
     }
     
@@ -116,6 +136,11 @@ int main(){
     
     list->print();
 
+    Partition(list, 5);
+
+    cout << "\nAfter partition:\n";
+
+    list->print();
     
 
 

@@ -64,8 +64,14 @@ int main(){
         queue->enqueue(i);
     }
     
+
+    queue->dequeue();
+    queue->dequeue();
+    queue->enqueue(79);
+
+
     cout << "Dequeueing queue one by one..." << endl;
-    
+
     while (!queue->empty())
     {
         cout << queue->dequeue() << endl;

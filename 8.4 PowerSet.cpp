@@ -45,6 +45,7 @@ vector<vector<int> *>* getSubset(vector<int> * set, int ind){
 
 
 
+
 int main(){
     vector<int> set = {1, 2, 3};
 

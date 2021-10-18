@@ -20,6 +20,8 @@
     "iostream": "cpp",
     "new": "cpp",
     "array": "cpp",
-    "string_view": "cpp"
+    "string_view": "cpp",
+    "set": "cpp",
+    "vector": "cpp"
   }
 }
